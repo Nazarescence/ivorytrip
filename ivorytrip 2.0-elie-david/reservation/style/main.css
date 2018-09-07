@@ -1,0 +1,105 @@
+/*MAIN StyleSheet*/
+
+article, aside, details, figcaption, figure, footer, header, main, nav, section { display: block; }
+
+
+
+*{
+	box-sizing:border-box;
+}
+html{
+	font-family:Verdana, Arial,sans-serif;
+}
+body{
+	margin:0;
+	padding:0;
+}
+
+h1{
+	color:black;
+}
+
+/*FORM*****************************/
+
+fieldset {
+	border:0;
+}
+legend{
+	color:green;
+	font-size:20px;
+}
+
+ul{
+	list-style:none;/*elimine les puces*/
+	padding-left:0;/*elimine les 40pxpar défaut du ul sur la gauche*/ 
+	
+}
+
+#coordonnees li {
+	/* background-color:red; */
+	margin:3px;
+}
+#coordonnees label{
+	/* background-color:yellow; */
+	/*
+		on applique une largeur d'un quart du parent. En donnant la même largeur à tous les label, on obtient l'alignement visuel voulu
+	*/
+	width:25%;
+	/*
+		pour que les labels s'alignent et prennent la width définie avant
+	*/
+	display:inline-block; 
+	/* 
+		min-width permet de définir un seuil minimal de largeur pour les labels. Ils ne peuvent pas faire moins de 100x mais ils peuvent être plus grands
+	*/
+	min-width:100px;
+}
+#coordonnees input{
+	height:40px;
+	width:72%; /*on ne met pas 75% car la somme de 25% des labels + 75% des input fait 100% mais on a le problème du whitespace donc les input ne rentrent pas. Soit on enlève les white space dans le html, soit on diminue légèrement la largeur des input*/
+	
+}
+
+#reservation ul{
+	/* border:1px solid green; */
+	margin-left:25%;
+	
+	
+}
+
+/*on cible uniquement les 4 li des radio bouton*/
+#reservation .calendrier{
+	/* 	background-color:orange; */
+	display:inline-block;
+	width:48%;
+}
+
+#reservation li {
+	/* background-color:red; */
+	margin:3px;
+}
+
+#reservation label{
+	
+	width:30%;
+	
+	
+	display:inline-block; 
+	
+	min-width:100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
