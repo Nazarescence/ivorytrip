@@ -46,3 +46,4 @@ require_once ('views/page_top.php');
 		<!--footer regroupant les autres destinations proposees-->	
 		<?php
 require_once ('views/page_bottom.php');
+//essai
