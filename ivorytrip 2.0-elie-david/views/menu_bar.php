@@ -17,3 +17,5 @@
         <li><a href="photos.php" target="blank"><img src="images/photos.png" alt="photos"/> Galerie photos</a></li>
     </ul>
 </nav>
+
+<!-- Elie Test -->
