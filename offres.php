@@ -5,7 +5,6 @@ require_once ('views/page_top.php');
 require_once ('connexionbdd/conn.php');
 
 ?>
-
 		<main>
 			<section id="safari">
                 <?php while ($donnees = $produit->fetch()) {?>
@@ -19,7 +18,6 @@ require_once ('connexionbdd/conn.php');
                     </a>
                 </article>
                 <?php } ?>
-
 			</section>
 		</main>
 		
