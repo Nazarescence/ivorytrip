@@ -1,4 +1,6 @@
 <?php
+const CSS_NAME = 'reservation.css';
+
 require_once ('views/page_top.php');
 ?>
 		<main>

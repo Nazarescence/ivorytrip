@@ -12,8 +12,12 @@ catch(Exception $e)
 
 // Si tout va bien, on peut continuer
 
-// On récupère tout le contenu de la table
+// On récupère tout le contenu de la table user
 $reponse = $bdd->query('SELECT * FROM user');
+
+// On récupère tout le contenu de la table produit
+$produit = $bdd->query('SELECT * FROM produit');
+
 
 // On affiche chaque entrée une à une
 while ($donnees = $reponse->fetch())

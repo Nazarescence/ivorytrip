@@ -1,5 +1,5 @@
 <?php
-
+const CSS_NAME = 'tarifs.css';
 require_once ('views/page_top.php');
 ?>
 		<main>

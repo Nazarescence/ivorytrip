@@ -1,4 +1,5 @@
 <?php
+const CSS_NAME = 'produit.css';
 
 require_once ('views/page_top.php');
 ?>

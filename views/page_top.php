@@ -15,7 +15,7 @@ session_start();
     <title>IvoryTrip</title>
     <meta name="author" content="David SANE - Elie OYOUA" >
     <meta name="description" content="Promotion du tourisme en Côte d'Ivoire" >
-    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/<?=CSS_NAME?>">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
     <script src="https://use.fontawesome.com/639c474b7d.js"></script>
 
