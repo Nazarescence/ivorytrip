@@ -44,3 +44,4 @@ while ($donnees = $reponse->fetch())
 $reponse->closeCursor(); // Termine le traitement de la requête
 
 ?>
+//essai
