@@ -12,7 +12,7 @@ catch(Exception $e)
 
 // Si tout va bien, on peut continuer
 
-// On récupère tout le contenu de la table jeux_video
+// On récupère tout le contenu de la table
 $reponse = $bdd->query('SELECT * FROM user');
 
 // On affiche chaque entrée une à une
@@ -20,7 +20,7 @@ while ($donnees = $reponse->fetch())
 {
     ?>
     <p>
-        <strong>Jeu</strong> : <?php echo $donnees['nom']; ?><br />
+        <strong>TestBDD</strong> : <?php echo $donnees['nom']; ?><br />
     </p>
     <?php
 }
