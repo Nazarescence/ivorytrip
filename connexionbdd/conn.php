@@ -18,6 +18,18 @@ $reponse = $bdd->query('SELECT * FROM user');
 // On récupère tout le contenu de la table produit
 $produit = $bdd->query('SELECT * FROM produit');
 
+$sql = "INSERT INTO user ( nom, prenom, age, email, password)
+VALUES ('$nom','$prenom',0,'$email',$psw)";
+
+if ($bdd->query($sql) === TRUE) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . $bdd->error;
+}
+
+$bdd->close();
+
+
 
 // On affiche chaque entrée une à une
 while ($donnees = $reponse->fetch())
