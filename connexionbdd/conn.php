@@ -19,7 +19,7 @@ $reponse = $bdd->query('SELECT * FROM user');
 $produit = $bdd->query('SELECT * FROM produit');
 
 $sql = "INSERT INTO user ( nom, prenom, age, email, password)
-VALUES ('$nom','$prenom',0,'$email',$psw)";
+VALUES ('$nom','$prenom',0,'$email','$psw')";
 
 if ($bdd->query($sql) === TRUE) {
     echo "New record created successfully";
