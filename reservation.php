@@ -2,6 +2,8 @@
 const CSS_NAME = 'reservation.css';
 
 require_once ('views/page_top.php');
+
+
 ?>
 		<main>
 			<div id="voyage">
@@ -88,15 +90,18 @@ require_once ('views/page_top.php');
 							</li>
 							<li>
 								<span>Type de vacances:</span>
-									
-									<input type="radio" id="r-naturelles" name="vacances" value="r-naturelles" checked />
+									<input type="radio"  id="r-naturelles" name="vacances" value="r-naturelles" checked />
 									<label for="r-naturelles">Réserves naturelles</label>
-									
-									<input type="radio" id="bord-de-mer" name="vacances" value="bord-de-mer"/>  
+                                <a href="panier.php?action=ajout&amp;l=LIBELLEPRODUIT&amp;q=QUANTITEPRODUIT&amp;p=PRIXPRODUIT" onclick="window.open(this.href, '',
+'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;">Ajouter au panier</a>
+									<input type="radio" id="bord-de-mer" name="vacances" value="bord-de-mer"/>
 									<label for="bord-de-mer">Bord de mer</label>
-									
+                                <a href="panier.php?action=ajout&amp;l=LIBELLEPRODUIT&amp;q=QUANTITEPRODUIT&amp;p=PRIXPRODUIT" onclick="window.open(this.href, '',
+'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;">Ajouter au panier</a>
 									<input type="radio" id="ville" name="vacances" value="ville"/>  
 									<label for="ville">Villes et villages</label>
+                                <a href="panier.php?action=ajout&amp;l=LIBELLEPRODUIT&amp;q=QUANTITEPRODUIT&amp;p=PRIXPRODUIT" onclick="window.open(this.href, '',
+'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;">Ajouter au panier</a>
 								</li>
 								</ul>
 							</fieldset>

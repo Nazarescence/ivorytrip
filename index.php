@@ -1,12 +1,16 @@
 <?php
 const CSS_NAME = 'main.css';
 
-require_once ('views/page_top.php');
-
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
-$email = $_POST['email'];
+$age = $_POST['age'];
+$email = $_POST['courriel'];
 $psw = $_POST['psw'];
+var_dump($_POST);
+
+require_once ('views/page_top.php');
+require_once ('connexionbdd/conn.php');
+
 
 ?>
 
@@ -30,10 +34,14 @@ $psw = $_POST['psw'];
                                 <label for="prenom">Prenom</label>
                                 <input type="text" id="prenom" name="prenom"/>
                             </li>
+                            <li>
+                                <label for="age">Age</label>
+                                <input type="text" id="age" name="age">
+                            </li>
                             <br>
                             <li>
-                                <label for="email">Courriel</label>
-                                <input type="email" id="email" name="email"/>
+                                <label for="courriel">Courriel</label>
+                                <input type="email" id="courriel" name="courriel"/>
                             </li>
                             <li>
                                 <label for="password">Mot De Passe</label>
