@@ -5,7 +5,7 @@
  * Date: 01/09/2018
  * Time: 16:21
  */
-session_start();
+
 ?>
 
 <!DOCTYPE html>

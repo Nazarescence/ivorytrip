@@ -1,11 +1,10 @@
 <?php
 
-
 const CSS_NAME = 'main.css';
 
 
-var_dump($_POST);
 
+require_once ('define2.php');
 require_once ('views/page_top.php');
 require_once ('connexionbdd/conn.php');
 
@@ -16,7 +15,7 @@ require_once ('connexionbdd/conn.php');
 				<img src="images/bannniere3.jpg" alt="banniere du site" style="width:75%;">
 			</div>
 			<div id="submain">
-                <form action="connexionbdd" method="post">
+                <form action="connexionbdd/conn.php" method="post">
                     <fieldset id="coordonnees">
                         <legend>S'inscrire</legend>
                         <ul>
@@ -69,9 +68,6 @@ require_once ('connexionbdd/conn.php');
 						<input type="submit" value="Envoyer"/>
 					</fieldset>
 				</form>
-				
-				
-			</div>			
 		</main>	
 		
 		<!--footer regroupant les autres destinations proposees-->	

@@ -1,30 +1,33 @@
 <?php
-if( ! array_key_exists('nom',$_POST)){
-    $_POST['nom'] = "";
-}
-$nom = $_POST['nom'];
 
-if( ! array_key_exists('prenom',$_POST)){
-    $_POST['prenom'] = "";
-}
-$prenom = $_POST['prenom'];
 
-if( ! array_key_exists('age',$_POST)){
-    $_POST['age'] = 0;
-}
-$age = $_POST['age'];
 
-if( ! array_key_exists('courriel',$_POST)){
-    $_POST['courriel'] = "";
-}
-$email = $_POST['courriel'];
 
-if( ! array_key_exists('psw',$_POST)){
-    $_POST['psw'] = "";
-}
-$psw = $_POST['psw'];
+$servername = "localhost";
+$username = "root";
+$dbname = "canadatrip";
+$password = "abc123...";
 
-try
+
+// Create connection
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "INSERT INTO user (nom, prenom, age, courriel, password)
+VALUES ('$nom', '$prenom','$age' ,'$email' ,'$psw' )";
+
+if (mysqli_query($conn, $sql)) {
+    echo "New record created successfully";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
+/*try
 {
     // On se connecte à MySQL
     $bdd = new PDO('mysql:host=localhost;dbname=canadatrip;charset=utf8', 'root', 'abc123...');
@@ -58,4 +61,4 @@ while ($donnees = $reponse->fetch())
 $reponse->closeCursor(); // Termine le traitement de la requête*/
 
 ?>
-//essai
+
