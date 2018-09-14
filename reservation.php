@@ -51,32 +51,6 @@ require_once ('views/page_top.php');
 							</li>
 							
 						</ul>
-					</fieldset>	
-					
-					<fieldset id="reservation">
-						<legend>Informations concernant la réservation</legend>
-						<ul>
-							<!-- on associe le libelle label au champ de formulaire input grace a l'attribut for qui doit prendre comme valeur la valeur de l'id de l'input. Maniere recommandee-->
-							<li class="calendrier">
-								<label for="debut-sejour">Début du séjour</label>
-								<input type="date" id="debut-sejour" name="debut-sejour" />
-							</li>
-							
-							<li class="calendrier">
-								<label for="fin-sejour">Fin du séjour</label>
-								<input type="date" id="fin-sejour" name="fin-sejour"/>
-							</li>
-							
-							<li class="calendrier">
-								<label for="adultes">Nombre d'adultes</label>
-								<input type="number" id="adultes" name="adultes"/>
-							</li>
-							<!--nouveau en html5 champ de saisie d1 adresse mail-->
-							<li class="calendrier">
-								<label for="enfants">Nombre d'enfants</label>
-								<input type="number" id="enfants" name="enfants"/>
-							</li>
-						</ul>
 					</fieldset>
 					<fieldset id="hebergement">
 						<ul>
@@ -92,15 +66,15 @@ require_once ('views/page_top.php');
 								<span>Type de vacances:</span>
 									<input type="radio"  id="r-naturelles" name="vacances" value="r-naturelles" checked />
 									<label for="r-naturelles">Réserves naturelles</label>
-                                <a href="panier.php?action=ajout&amp;l=LIBELLEPRODUIT&amp;q=QUANTITEPRODUIT&amp;p=PRIXPRODUIT" onclick="window.open(this.href, '',
+                                <a href="panier.php?action=ajout&amp;l=libelleProduit&amp;q=qteProduit&amp;p=prixProduit" onclick="window.open(this.href, '',
 'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;">Ajouter au panier</a>
 									<input type="radio" id="bord-de-mer" name="vacances" value="bord-de-mer"/>
 									<label for="bord-de-mer">Bord de mer</label>
-                                <a href="panier.php?action=ajout&amp;l=LIBELLEPRODUIT&amp;q=QUANTITEPRODUIT&amp;p=PRIXPRODUIT" onclick="window.open(this.href, '',
+                                <a href="panier.php?action=ajout&amp;l=libelleProduit&amp;q=qteProduit&amp;p=prixProduit" onclick="window.open(this.href, '',
 'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;">Ajouter au panier</a>
-									<input type="radio" id="ville" name="vacances" value="ville"/>  
+									<input type="radio" id="ville" name="vacances" value="ville"/>
 									<label for="ville">Villes et villages</label>
-                                <a href="panier.php?action=ajout&amp;l=LIBELLEPRODUIT&amp;q=QUANTITEPRODUIT&amp;p=PRIXPRODUIT" onclick="window.open(this.href, '',
+                                <a href="panier.php?action=ajout&amp;l=libelleProduit&amp;q=qteProduit&amp;p=prixProduit" onclick="window.open(this.href, '',
 'toolbar=no, location=no, directories=no, status=yes, scrollbars=yes, resizable=yes, copyhistory=no, width=600, height=350'); return false;">Ajouter au panier</a>
 								</li>
 								</ul>
@@ -108,14 +82,14 @@ require_once ('views/page_top.php');
 							<fieldset id="voscommentaires">
 								<input type="checkbox" id="offres" name="offres" value="offres" checked />
 								<span>Je souhaite recevoir les offres promotionnelles</span>
-								
+
 								<div id="textarea">
 									<label for="message">Questions et commentaires:</label>
 									<textarea id="message" name="message" placeholder="votre message ici">
 									</textarea>
-								</div>			
+								</div>
 							</fieldset>
-							
+
 							<div>
 								<!--bouton de soumission du formulaire-->
 								<input type="submit" value="soumettre" id="submit"/>

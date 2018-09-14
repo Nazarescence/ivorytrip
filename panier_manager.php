@@ -9,7 +9,11 @@ function creationPanier(){
         $_SESSION['panier']=array();
         $_SESSION['panier']['libelleProduit'] = array();
         $_SESSION['panier']['qteProduit'] = array();
-        $_SESSION['panier']['prixProduit'] = array();
+        $_SESSION['panier']['prixProduit'] = array(
+            "parcs" => array(3000,2000,1000),
+            "bord de mer" => array(3000,2000,1000),
+            "ville" => array(3000,2000,1000),
+        );
         $_SESSION['panier']['verrou'] = false;
     }
     return true;

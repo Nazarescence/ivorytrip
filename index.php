@@ -1,11 +1,9 @@
 <?php
+
+
 const CSS_NAME = 'main.css';
 
-$nom = $_POST['nom'];
-$prenom = $_POST['prenom'];
-$age = $_POST['age'];
-$email = $_POST['courriel'];
-$psw = $_POST['psw'];
+
 var_dump($_POST);
 
 require_once ('views/page_top.php');
@@ -13,8 +11,6 @@ require_once ('connexionbdd/conn.php');
 
 
 ?>
-
-
 		<main>
 			<div id="banniere">
 				<img src="images/bannniere3.jpg" alt="banniere du site" style="width:75%;">
@@ -67,7 +63,7 @@ require_once ('connexionbdd/conn.php');
                         <br>
                         <li>
                             <label for="password">Mot De Passe</label>
-                            <input type="password" id="password" name="psw">
+                            <input type="password" id="password" name="password">
                         </li>
                         <br>
 						<input type="submit" value="Envoyer"/>

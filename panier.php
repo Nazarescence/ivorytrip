@@ -82,16 +82,16 @@ echo '<?xml version="1.0" encoding="utf-8"?>';?>
         {
             $nbArticles=count($_SESSION['panier']['libelleProduit']);
             if ($nbArticles <= 0)
-                echo "<tr><td>Votre panier est vide </ td></tr>";
+                echo "<tr><td>Votre panier est vide </td></tr>";
             else
             {
                 for ($i=0 ;$i < $nbArticles ; $i++)
                 {
                     echo "<tr>";
-                    echo "<td>".htmlspecialchars($_SESSION['panier']['libelleProduit'][$i])."</ td>";
+                    echo "<td>".htmlspecialchars($_SESSION['panier']['libelleProduit'][$i])."</td>";
                     echo "<td><input type=\"text\" size=\"4\" name=\"q[]\" value=\"".htmlspecialchars($_SESSION['panier']['qteProduit'][$i])."\"/></td>";
                     echo "<td>".htmlspecialchars($_SESSION['panier']['prixProduit'][$i])."</td>";
-                    echo "<td><a href=\"".htmlspecialchars("panier.php?action=suppression&l=".rawurlencode($_SESSION['panier']['libelleProduit'][$i]))."\">XX</a></td>";
+                    echo "<td><a href=\"".htmlspecialchars("panier.php?action=suppression&l=".rawurlencode($_SESSION['panier']['libelleProduit'][$i]))."\">Supprimer</a></td>";
                     echo "</tr>";
                 }
 
@@ -110,6 +110,37 @@ echo '<?xml version="1.0" encoding="utf-8"?>';?>
         ?>
     </table>
 </form>
-<p>Si vous voulez poursuivre vos achats <a href="reservation.php"> cliquez ici</a> pour revenir au catalogue</p>
+<form action="paiement.php" method="post">
+    <fieldset id="reservation">
+        <legend>Informations concernant la réservation</legend>
+        <ul>
+            <!-- on associe le libelle label au champ de formulaire input grace a l'attribut for qui doit prendre comme valeur la valeur de l'id de l'input. Maniere recommandee-->
+            <li class="calendrier">
+                <label for="debut-sejour">Début du séjour</label>
+                <input type="date" id="debut-sejour" name="debut-sejour" />
+            </li>
+
+            <li class="calendrier">
+                <label for="fin-sejour">Fin du séjour</label>
+                <input type="date" id="fin-sejour" name="fin-sejour"/>
+            </li>
+
+            <li class="calendrier">
+                <label for="adultes">Nombre d'adultes</label>
+                <input type="number" id="adultes" name="adultes"/>
+            </li>
+            <!--nouveau en html5 champ de saisie d1 adresse mail-->
+            <li class="calendrier">
+                <label for="enfants">Nombre d'enfants</label>
+                <input type="number" id="enfants" name="enfants"/>
+            </li>
+        </ul>
+        <div>
+            <!--bouton de soumission du formulaire-->
+            <input type="submit" value="Valider mes achats" id="submit"/>
+        </div>
+    </fieldset>
+</form>
+<p>Afin de poursuivre vos achats <a href="reservation.php"> cliquez ici</a> pour revenir au catalogue</p>
 </body>
 </html>
